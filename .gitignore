@@ -6,3 +6,5 @@
 uploads/
 .coverage
 .env
+assets/.sass-cache/*
+.sass-cache/*
