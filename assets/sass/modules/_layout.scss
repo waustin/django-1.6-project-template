@@ -1,0 +1,65 @@
+%sidebar {
+	float: left;
+	width: 20%;
+	margin-right: 4%;
+	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
+		margin-right: 8%;
+		width: 30%;
+	}
+	@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
+		width: auto;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $LIGHT_GREY;
+	}
+
+}
+%main-column {
+	float: left;
+	width: 76%;
+	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
+		width: 62%;
+	}
+	@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
+		width: auto;
+		float: none;
+	}
+}
+
+// 2 column layout class
+.two-column-layout {
+	.sidebar {
+		@extend %sidebar;
+		position: relative;
+		&:before, &:after {
+			display: block;
+			content: '';
+			width: 15px;
+			height: 666px;
+			background-image: url(../images/sidebar-divider-sprite.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+		}
+		&:before {
+			left: -30px;
+			background-position: 0 0;
+		}
+		&:after {
+			right: -30px;
+			background-position: -55px 0;
+		}
+		
+		@include respond-to("max-width:" + $SMALL_SCREEN_WIDTH) {
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+	.main-column {
+		@extend %main-column;
+	}
+}
+
