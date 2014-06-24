@@ -9,3 +9,8 @@ $HEADING_FONT_STACK: $SERIF_FONT_STACK;
     -webkit-font-smoothing: antialiased;
 }
 
+// A simple rem font size mixin assume 62.5% for html element
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
