@@ -9,6 +9,10 @@
 @import "modules/helpers";
 @import "modules/layout";
 
+// Turn on border box sizing
+*, *:before, *:after {
+        @include box-sizing(border-box);
+}
 
 body {
 	font-size: 62.5%; /* 10/16 make - this make em/rem math a power of 10 */
