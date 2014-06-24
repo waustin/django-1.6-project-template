@@ -14,8 +14,12 @@
         @include box-sizing(border-box);
 }
 
+html {
+    font-size: 62.5%; /* 10/16 make - this make em/rem math a power of 10 */
+}
+
 body {
-	font-size: 62.5%; /* 10/16 make - this make em/rem math a power of 10 */
+    @include font-size(1.6);
     min-width: 240px;
 	font-family: $SANS_SERIF_FONT_STACK;
 }
