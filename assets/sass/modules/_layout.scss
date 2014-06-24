@@ -2,6 +2,7 @@
 	float: left;
 	width: 20%;
 	margin-right: 4%;
+    min-height: 1px; // prevent horizontal collapse
 	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
 		margin-right: 8%;
 		width: 30%;
@@ -19,6 +20,7 @@
 %main-column {
 	float: left;
 	width: 76%;
+    min-height: 1px; // prevent horizontal collapse
 	@include respond-to("max-width:" + $MEDIUM_SCREEN_WIDTH) {
 		width: 62%;
 	}
