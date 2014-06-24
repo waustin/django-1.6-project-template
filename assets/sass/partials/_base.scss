@@ -11,7 +11,7 @@
 
 
 body {
-	font-size: 87.5%; /* 14/16 */
+	font-size: 62.5%; /* 10/16 make - this make em/rem math a power of 10 */
     min-width: 240px;
 	font-family: $SANS_SERIF_FONT_STACK;
 }
